@@ -3,18 +3,38 @@
 class Calculator {
   //write your code here
   constructor () {
+    this.num = 1
   }
-  add () {
+  add (numAdd) {
+    this.num += numAdd
+    return this
   }
-  substract () {
+  substract (numSubstract) {
+    this.num -= numSubstract
+    return this
   }
-  multiply () {
+  multiply (numMultiply) {
+    this.num *= numMultiply
+    return this
   }
-  divide () {
+  divide (numDivide) {
+    this.num /= numDivide
+    return this
   }
   square () {
+    this.num = Math.pow(this.num, 2)
+    return this
   }
   squareRoot () {
+    this.num = Math.sqrt(this.num)
+    return this
+  }
+  diameter () {
+    this.num = Math.PI * Math.pow(this.num, 2)
+    return this
+  }
+  save () {
+    return this.num
   }
 }
 
@@ -26,6 +46,4 @@ class Calculator {
 * - Method Chaining
 */
 
-module.exports = {
-  Calculator
-}
+module.exports = {Calculator}
