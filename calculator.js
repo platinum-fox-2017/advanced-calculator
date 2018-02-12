@@ -2,20 +2,53 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor(val) {
+    this.val = val;
+    this.phi = 3.14;
   }
-  add () {
+
+  add(number) {
+    this.val = this.val + number;
+    return this;
   }
-  substract () {
+
+  substract(number) {
+    this.val = this.val - number;
+    return this;
   }
-  multiply () {
+
+  multiply(number) {
+    this.val = this.val * number;
+    return this;
   }
-  divide () {
+
+  divide(number) {
+    this.val = this.val / number;
+    return this;
   }
-  square () {
+
+  square(number=1) {
+    if(number == 0) {
+        this.val = 1;
+        return this
+    } else if (number == 1) {
+        return this;
+    } else {
+        let retVal = 1;
+        for(let i = 0; i < number; i++) {
+            retVal = retVal * this.val;
+        }
+        this.val = retVal;
+        return this;
+    }
   }
+
   squareRoot () {
+    let retVal = Math.sqrt(this.val);
+    this.val   = retVal;
+    return this; 
   }
+
 }
 
 /** note : you can use several features from ecmascript, such as:
