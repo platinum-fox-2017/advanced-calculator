@@ -47,7 +47,7 @@ class Calculator {
 */
 let calculate = new Calculator()
 
-calculate.add(200).substract(2).multiply(10).divide(2).power(2).root(2).pi().display()
+// calculate.add(200).substract(2).multiply(10).divide(2).power(2).root(2).pi().display()
 
 module.exports = {
   Calculator
