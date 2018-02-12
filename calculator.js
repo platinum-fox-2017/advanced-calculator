@@ -1,20 +1,55 @@
 'use strict'
 
 class Calculator {
-  //write your code here
-  constructor () {
+  
+  constructor (value) {
+    this.value = value;
   }
-  add () {
+
+  add (num) {
+    let valueBefore = this.value;
+    this.value += num;
+    console.log(`${valueBefore}+${num} = ${this.value}`);
+    return this;
   }
-  substract () {
+
+  substract (num) {
+    let valueBefore = this.value;
+    this.value -= num;
+    console.log(`${valueBefore}-${num} = ${this.value}`);
+    return this;
   }
-  multiply () {
+
+  multiply (num) {
+    let valueBefore = this.value;
+    this.value *= num;
+    console.log(`${valueBefore}*${num} = ${this.value}`);
+    return this;
   }
-  divide () {
+
+  divide (num) {
+    let valueBefore = this.value;
+    this.value /= num;
+    console.log(`${valueBefore}/${num} = ${this.value}`);
+    return this;
   }
-  square () {
+
+  square (num) {
+    let valueBefore = this.value;
+    this.value = Math.pow(this.value, num);   
+    console.log(`${valueBefore}^${num} = ${this.value}`);
+    return this;
   }
-  squareRoot () {
+
+  squareRoot (num) {
+    let valueBefore = this.value;
+    this.value = Math.sqrt(this.value);
+    console.log(`${valueBefore} square(${num}) = ${this.value}`);
+    return this;
+  }
+
+  is(){
+    return `The result is = ${this.value}`;
   }
 }
 
