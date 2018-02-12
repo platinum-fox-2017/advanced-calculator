@@ -12,23 +12,23 @@ class Calculator {
     return this
   }
 
-  substract (value2) {
-    this.result = this.result - value2
+  substract (value) {
+    this.result = this.result - value
     return this
   }
 
-  multiply (value3) {
-    this.result = this.result * value3
+  multiply (value) {
+    this.result = this.result * value
     return this
   }
 
-  divide (value4) {
-    this.result = this.result / value4
+  divide (value) {
+    this.result = this.result / value
     return this
   }
 
-  square (value5) {
-    this.result = Math.pow(this.result,value5)
+  square (value) {
+    this.result = Math.pow(this.result,value)
     return this
   }
 
