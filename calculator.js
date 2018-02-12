@@ -2,21 +2,43 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (hasil) {
+    this.hasil=hasil
   }
-  add () {
+  add (value) {
+    this.hasil= this.hasil+value
+    return this
   }
-  substract () {
+  substract (value) {
+    this.hasil= this.hasil-value
+    return this
   }
-  multiply () {
+  multiply (value) {
+    this.hasil= this.hasil*value
+    return this
   }
-  divide () {
+  divide (value) {
+    this.hasil= this.hasil/value
+    return this
   }
-  square () {
+  square (value) {
+    this.hasil= Math.pow(this.hasil,value)
+    return this
   }
-  squareRoot () {
+  squareRoot (value) {
+    // this.hasil= Math.pow(this.hasil,(1/value))
+    this.hasil= Math.sqrt(this.hasil,value)
+    return this
+  }
+
+  konstanta (){
+    this.hasil=this.hasil*Math.PI
+    return this
   }
 }
+
+let hitung = new Calculator(5)
+console.log(hitung.add(5).divide(5).multiply(4).square(3))
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
