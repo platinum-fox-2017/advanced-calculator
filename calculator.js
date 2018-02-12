@@ -51,7 +51,7 @@ class Calculator {
 /** note : you can use several features from ecmascript, such as:
 * - Classes
 * - Default Parameters
-* - Destructured Assignment
+* - Destructured Assignment 
 * - Template Literals
 * - Method Chaining
 */
