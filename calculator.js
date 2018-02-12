@@ -2,19 +2,40 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (number) {
+    this.number = number
   }
-  add () {
+  add (target) {
+    this.number += target;
+    return this;
   }
-  substract () {
+  substract (target) {
+    this.number -= target;
+    return this;
   }
-  multiply () {
+  multiply (target) {
+    this.number *= target;
+    return this;
   }
-  divide () {
+  divide (target) {
+    this.number /= target;
+    return this;
   }
-  square () {
+  square (target) {
+    this.number = Math.pow(this.number,target);
+    return this;
   }
-  squareRoot () {
+  squareRoot (target) {
+    this.number = Math.round(Math.pow(this.number,1/target));
+    return this;
+  }
+  circle(target) {
+    //Area of circle = Pie * Radius to the power of 2;
+    this.number = Math.round(Math.PI* Math.pow(this.number,2));
+    return this;
+  }
+  print(){
+    return this.number ;
   }
 }
 
