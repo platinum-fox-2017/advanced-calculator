@@ -2,4 +2,5 @@
 
 const {Calculator} = require("./calculator.js")
 
-// execute function on calculator.js in here
+let calc = new Calculator(7)
+calc.circumference().multiply(10).add(3).print()
