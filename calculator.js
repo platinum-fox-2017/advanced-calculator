@@ -3,18 +3,47 @@
 class Calculator {
   //write your code here
   constructor () {
+    this._result = 0;
   }
-  add () {
+
+  add (num) {
+    this._result += num;
+    return this
   }
-  substract () {
+
+  substract (num) {
+    this._result -= num;
+    return this
   }
-  multiply () {
+
+  multiply (num) {
+    this._result *= num;
+    return this
   }
-  divide () {
+
+  divide (num) {
+    this._result /= num;
+    return this
   }
-  square () {
+  
+  square (num) {
+    this._result = Math.pow(this._result, num)
+    return this
   }
-  squareRoot () {
+  
+  squareRoot (num) {
+    this._result = Math.sqrt(num)
+    return this
+  }
+
+  MathPi (num) {
+    this._result = Math.PI * (num + num);
+    return this
+  }
+
+  print() {
+    console.log(`Result: ${this._result}`);
+    return this
   }
 }
 
