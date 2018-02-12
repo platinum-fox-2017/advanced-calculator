@@ -29,6 +29,10 @@ class Calculator {
     this.number = Math.sqrt(this.number);
     return this;
   }
+  circle(number) {
+    this.number = 3.14 * this.square().number;
+    return this;
+  }
 }
 
 /** note : you can use several features from ecmascript, such as:
