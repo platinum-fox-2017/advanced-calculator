@@ -3,7 +3,7 @@ const assert = require('assert')
 const { Calculator } = require('./calculator.js')
 
 describe('Test features', () => {
-  const calc = new Calculator()
+  const calc = new Calculator(1)
   const data = Object.keys(calc)
   it('should have default value for variable', () => {
     assert.deepEqual(calc[data], 1)
