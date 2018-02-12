@@ -47,8 +47,9 @@ class Calculator {
   }
 }
 
-let cal = new Calculator(343)
-console.log(cal.squareRoot(3).phi().add(10).substract(5).divide(10).multiply(5).square(2).result()); // 181.9801
+let cal = new Calculator()
+// console.log(cal);
+// console.log(cal.squareRoot(3).phi().add(10).substract(5).divide(10).multiply(5).square(2).result()); // 181.9801
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
