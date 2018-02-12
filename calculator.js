@@ -3,18 +3,40 @@
 class Calculator {
   //write your code here
   constructor () {
+    this.number = 0
   }
-  add () {
+  add (addNum) {
+    this.number = this.number + addNum
+    return this
   }
-  substract () {
+  substract (subNum) {
+    this.number = this.number - subNum
+    return this
   }
-  multiply () {
+  multiply (xNum) {
+    this.number = this.number * xNum
+    return this
   }
-  divide () {
+  divide (divNum) {
+    this.number = this.number / divNum
+    return this
   }
-  square () {
+  square (squareNum) {
+    this.number = Math.pow(this.number,squareNum)
+    return this
   }
   squareRoot () {
+    this.number = Math.sqrt(this.number)
+    return this
+  }
+  circleArea(radius){
+    this.number = (Math.PI * Math.pow(radius,2)).toFixed(2)
+    return this
+
+  }
+  save (){
+    return `Totalnya adalah ${this.number}`
+
   }
 }
 
