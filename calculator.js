@@ -4,13 +4,14 @@
 class Calculator {
   constructor(input){
     this.input = input || 0
+    this.process = 0
     this.result = 0
     this.pi = 3.14159265359
   }
 
   add(operator){
     this.process = this.input + operator
-    console.log(`${this.input} + ${operator} = ${this.finish()}`)
+    console.log(`${this.input} + ${operator} = ${this.process}`)
     this.result = this.process
     this.input = this.process
     return this
@@ -18,7 +19,7 @@ class Calculator {
 
   substract(operator){
     this.process = this.input - operator
-    console.log(`${this.input} - ${operator} = ${this.finish()}`)
+    console.log(`${this.input} - ${operator} = ${this.process}`)
     this.result = this.process
     this.input = this.process
     return this
@@ -26,7 +27,7 @@ class Calculator {
 
   multiply(operator){
     this.process = this.input * operator
-    console.log(`${this.input} x ${operator} = ${this.finish()}`)
+    console.log(`${this.input} x ${operator} = ${this.process}`)
     this.result = this.process
     this.input = this.process
     return this
@@ -34,7 +35,7 @@ class Calculator {
 
   divide(operator){
     this.process = this.input / operator
-    console.log(`${this.input} / ${operator} = ${this.finish()}`)
+    console.log(`${this.input} / ${operator} = ${this.process}`)
     this.result = this.process
     this.input = this.process
     return this
@@ -42,7 +43,7 @@ class Calculator {
 
   square(operator){
     this.process = Math.pow(this.input, operator)
-    console.log(`${this.input} ^ ${operator} = ${this.finish()}`)
+    console.log(`${this.input} ^ ${operator} = ${this.process}`)
     this.result = this.process
     this.input = this.process
     return this
@@ -54,7 +55,7 @@ class Calculator {
     }
     let root = String.fromCharCode(8730)
     this.process = Math.pow(this.input, 1/operator)
-    console.log(`${operator} ${root} ${this.input} = ${this.finish()}`)
+    console.log(`${operator} ${root} ${this.input} = ${this.process}`)
     this.result = this.process
     this.input = this.process
     return this
@@ -62,15 +63,12 @@ class Calculator {
 
   finish(){
     this.result = this.process
-    return this.result
+    console.log(this.result);
+    return this
   }
 }
 
-var calculator = new Calculator(10)
 
-calculator.add(3).substract(2).multiply(2).square(2).root(2).add(calculator.pi)
-console.log(calculator);
-console.log(calculator.finish());
 
 
 
