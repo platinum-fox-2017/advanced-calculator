@@ -3,18 +3,52 @@
 class Calculator {
   //write your code here
   constructor () {
+    this._amount = 0
   }
-  add () {
+
+  setAmount(numb){
+    this._amount = numb
+    return this
   }
-  substract () {
+  
+  add (numb) {
+    this._amount += numb
+    return this
   }
-  multiply () {
+  substract (numb) {
+    this._amount = this._amount - numb
+    return this
   }
-  divide () {
+  multiply (numb) {
+    this._amount = this._amount * numb
+    return this
   }
-  square () {
+  divide (numb) {
+    this._amount = this._amount / numb
+    return this
   }
-  squareRoot () {
+  square (numb) {
+    this._amount = Math.pow(this._amount,numb)
+    return this
+  }
+  squareRoot (numb) {
+    let initialize = this._amount
+    for(let i = 0; i < this._amount; i++){
+      initialize /= numb
+      if(initialize === numb){
+        this._amount = i + 2
+      }
+    }
+    return this
+  }
+
+  pi(){
+    this._amount = this._amount * 22/7
+    return this
+  }
+
+  getTotal(){
+    return this._amount
   }
 }
 
