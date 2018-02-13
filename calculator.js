@@ -26,7 +26,7 @@ class Calculator {
     return this
   }
   
-  square (num) {
+  square (num = 2) {
     this._result = Math.pow(this._result, num)
     return this
   }
