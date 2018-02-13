@@ -1,8 +1,8 @@
 'use strict'
 
 class Calculator {
-  constructor (number) {
-    this.number = number
+  constructor () {
+    this.number = 1
   }
   add (addedNum) {
     this.number+=addedNum
@@ -20,8 +20,8 @@ class Calculator {
     this.number/=dividedNum
     return this
   }
-  square (squaredNum) {
-    this.number = Math.pow(squaredNum, this.number)
+  square () {
+    this.number = Math.pow(this.number, 2)
     return this
   }
   squareRoot () {
