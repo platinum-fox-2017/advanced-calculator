@@ -21,7 +21,7 @@ class Calculator {
     this.number = this.number / divNum
     return this
   }
-  square (squareNum) {
+  square (squareNum=2) {
     this.number = Math.pow(this.number,squareNum)
     return this
   }
